@@ -1,0 +1,13 @@
+# Don't track content of these folders
+data/models_saved/
+data/embeddings/
+data/reddit/
+
+
+# Large files #
+###################
+
+
+# Packages #
+############
+
