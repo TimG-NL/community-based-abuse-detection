@@ -9,7 +9,6 @@ from sklearn.model_selection import train_test_split
 # Model Building
 from keras.models import Sequential, Model
 from keras.layers import Bidirectional, LSTM, Dense, Embedding, Dropout, Input, concatenate
-
 from keras.callbacks import ModelCheckpoint, EarlyStopping
 
 
@@ -254,54 +253,14 @@ def LSTMmodel(vocab_size, maxlen, embedding_source, list_embedding_matrix):
 								weights=[combined_weigths],
 								trainable=False)(sentence_input)
 
-	model = Bidirectional(LSTM(100, return_sequences=True,dropout=0.50),merge_mode='concat')(embeddings)
-	model = TimeDistributed(Dense(100,activation='relu'))(model)
-	model = Flatten()(model)
-	model = Dense(100,activation='relu')(model)
-	output_layer = Dense(3,activation='softmax')(model)
-	
+	first_bilstm_layer = Bidirectional(LSTM(128, return_sequences=True))(embeddings)
+	second_bilstm_layer = Bidirectional(LSTM(64, return_sequences=True))(first_bilstm_layer)
+	attention_layer = AttentionWithContext()(second_bilstm_layer)
+	dense_layer = Dense(64, activation="relu")(attention_layer)
+	output_layer = Dense(3, activation="softmax")(dense_layer)
 	model = Model(sentence_input,output_layer)
 	model.compile(loss="categorical_crossentropy", optimizer='adam', metrics=['accuracy'])
 
-
-	# sentence_input = Input(shape=(maxlen,), dtype='int32')
-
-	# if embedding_source == 'glove':
-	# 	glove_weights = list_embedding_matrix[0]
-
-	# 	embedding_dim = 300
-	# 	glove_emb = Embedding(input_dim=vocab_size,
-	# 							output_dim=embedding_dim,
-	# 							input_length=maxlen,
-	# 							weights=[glove_weights],
-	# 							mask_zero=True,
-	# 							trainable=False)(sentence_input)
-
-	# elif embedding_source == 'fasttext':
-	# 	non_abusive_weights = list_embedding_matrix[0]
-	# 	abusive_weights = list_embedding_matrix[1]
-	# 	combined_weigths = list_embedding_matrix[2]
-
-		
-	# 	print(non_abusive_weights.shape, abusive_weights.shape, combined_weigths.shape)
-		
-	# 	embedding_dim = 600
-	# 	fasttext_emb = Embedding(input_dim=vocab_size,
-	# 							output_dim=embedding_dim,
-	# 							input_length=maxlen,
-	# 							weights=[combined_weigths],
-	# 							mask_zero=True,
-	# 							trainable=False)(sentence_input)
-
-	
-	# biLSTM_layer = Bidirectional(LSTM(units=128, activation="relu", dropout=0.2, recurrent_dropout=0.2, return_sequences=True))(glove_emb)
-	# #dropout_layer = Dropout(0.3)(biLSTM_layer)
-	# attention_layer = AttentionWithContext()(biLSTM_layer)
-	# output_layer = Dense(3, activation="softmax")(attention_layer)
-
-	# model = Model(sentence_input, output_layer)
-	# model.compile(optimizer="adam", loss="categorical_crossentropy", 
-	# 	 metrics=['accuracy'])
 
 	# print summary of the model
 	print(model.summary())
@@ -367,7 +326,7 @@ def main():
 	################ Define experiment settings
 	n_labels = 3 # train the model binary or multiclass
 	data_source = "reddit_distant" #gold_train #reddit+gold
-
+	embedding_source = 'glove'
 
 
 	# Define max sentence length
@@ -377,9 +336,6 @@ def main():
 	################ Load in the data
 	x_train, x_dev, y_train, y_dev, vocab_size, tokenizer = data_preparation(max_len_sent, data_source)
 	
-	
-	
-	embedding_source = 'glove'
 	if embedding_source == 'glove':
 		# load pretrained glove embeddings
 		glove_dict, glove_matrix = load_glove_embeddings(tokenizer, vocab_size)
