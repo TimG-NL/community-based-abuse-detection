@@ -4,6 +4,12 @@ data/embeddings/
 data/reddit/
 model/predictions/
 
+# Large Files #
+###################
+*.h5
+preprocessing/preprocessed_reddit_non_abusive.csv
+preprocessing/preprocessed_reddit_abusive.csv
+
 
 
 # Compiled source #
