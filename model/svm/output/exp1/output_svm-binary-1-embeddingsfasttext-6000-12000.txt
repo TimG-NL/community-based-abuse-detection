@@ -1,0 +1,55 @@
+############ New model #############
+['binary', '1', 'embeddings', 'fasttext', '6000', '12000', 'NA']
+Classification_type: binary
+		Inputtype: embeddings
+		Experiment_number: 1
+		Data_source: reddit_distant
+		Batch_dist: 6000
+		Batch_train_file: 12000
+		Gold_train_file: NA
+		Embeddings_source: fasttext
+		
+##### Loaded in training data #####
+svm-binary-1-embeddings-fasttext-reddit_distant-600012000.joblib
+########## Loaded fasttext vectors #############
+############ Done converting text to embeddings #############
+##### Training Model #####
+############ Done training model #############
+##### Loaded in test sets #####
+              precision    recall  f1-score   support
+
+           0     0.8957    0.3323    0.4847       620
+           1     0.3418    0.8996    0.4954       239
+
+    accuracy                         0.4901       859
+   macro avg     0.6187    0.6159    0.4900       859
+weighted avg     0.7416    0.4901    0.4877       859
+
+              precision    recall  f1-score   support
+
+           0     0.9320    0.3416    0.5000       682
+           1     0.2639    0.9045    0.4086       178
+
+    accuracy                         0.4581       860
+   macro avg     0.5980    0.6231    0.4543       860
+weighted avg     0.7937    0.4581    0.4811       860
+
+              precision    recall  f1-score   support
+
+           0     0.7352    0.4856    0.5849      2807
+           1     0.2897    0.5454    0.3784      1080
+
+    accuracy                         0.5022      3887
+   macro avg     0.5124    0.5155    0.4816      3887
+weighted avg     0.6114    0.5022    0.5275      3887
+
+              precision    recall  f1-score   support
+
+           0     0.9143    0.5193    0.6624      1706
+           1     0.4846    0.9028    0.6307       854
+
+    accuracy                         0.6473      2560
+   macro avg     0.6995    0.7111    0.6466      2560
+weighted avg     0.7710    0.6473    0.6518      2560
+
+######## Writing output to csv ########

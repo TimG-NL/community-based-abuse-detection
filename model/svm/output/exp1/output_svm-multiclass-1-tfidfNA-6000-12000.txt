@@ -1,0 +1,55 @@
+############ New model #############
+['multiclass', '1', 'tfidf', 'NA', '6000', '12000', 'NA']
+Classification_type: multiclass
+		Inputtype: tfidf
+		Experiment_number: 1
+		Data_source: reddit_distant
+		Batch_dist: 6000
+		Batch_train_file: 12000
+		Gold_train_file: NA
+		Embeddings_source: NA
+		
+##### Loaded in training data #####
+svm-multiclass-1-tfidf-NA-reddit_distant-600012000.joblib
+##### Training Model #####
+############ Done training model #############
+##### Loaded in test sets #####
+              precision    recall  f1-score   support
+
+           0     0.8450    0.4661    0.6008       620
+           1     0.3598    0.7782    0.4921       239
+
+    accuracy                         0.5530       859
+   macro avg     0.6024    0.6222    0.5464       859
+weighted avg     0.7100    0.5530    0.5706       859
+
+              precision    recall  f1-score   support
+
+           0     0.8986    0.4545    0.6037       682
+           1     0.1144    0.3194    0.1685        72
+           2     0.1943    0.5755    0.2905       106
+
+    accuracy                         0.4581       860
+   macro avg     0.4024    0.4498    0.3542       860
+weighted avg     0.7461    0.4581    0.5287       860
+
+              precision    recall  f1-score   support
+
+           0     0.7388    0.4243    0.5390      2807
+           1     0.2897    0.6102    0.3928      1080
+
+    accuracy                         0.4759      3887
+   macro avg     0.5143    0.5172    0.4659      3887
+weighted avg     0.6140    0.4759    0.4984      3887
+
+              precision    recall  f1-score   support
+
+           0     0.8198    0.4953    0.6175      1708
+           1     0.1738    0.2950    0.2188       383
+           2     0.3602    0.6730    0.4693       471
+
+    accuracy                         0.4980      2562
+   macro avg     0.4513    0.4878    0.4352      2562
+weighted avg     0.6387    0.4980    0.5307      2562
+
+######## Writing output to csv ########

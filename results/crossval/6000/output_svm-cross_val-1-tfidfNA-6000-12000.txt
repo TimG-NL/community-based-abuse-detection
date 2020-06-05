@@ -1,0 +1,61 @@
+############ New model #############
+Classification_type: multiclass
+		Inputtype: tfidf
+		Experiment_number: 1
+		Data_source: reddit_distant
+		Batch_train_file: 12000
+		Embeddings_source: NA
+		
+##### Loaded in training data #####
+              precision    recall  f1-score   support
+
+           0     0.5969    0.4842    0.5346       789
+           1     0.6449    0.4123    0.5030       815
+           2     0.5761    0.8979    0.7018       793
+
+    accuracy                         0.5966      2397
+   macro avg     0.6059    0.5981    0.5798      2397
+weighted avg     0.6063    0.5966    0.5792      2397
+
+              precision    recall  f1-score   support
+
+           0     0.5819    0.5140    0.5458       788
+           1     0.6240    0.4027    0.4895       812
+           2     0.5956    0.8795    0.7102       797
+
+    accuracy                         0.5978      2397
+   macro avg     0.6005    0.5987    0.5819      2397
+weighted avg     0.6007    0.5978    0.5814      2397
+
+              precision    recall  f1-score   support
+
+           0     0.5965    0.5191    0.5551       786
+           1     0.6314    0.4129    0.4993       809
+           2     0.6052    0.8939    0.7218       801
+
+    accuracy                         0.6085      2396
+   macro avg     0.6110    0.6086    0.5920      2396
+weighted avg     0.6112    0.6085    0.5920      2396
+
+              precision    recall  f1-score   support
+
+           0     0.5899    0.4994    0.5409       795
+           1     0.5740    0.3960    0.4687       803
+           2     0.6048    0.8860    0.7189       798
+
+    accuracy                         0.5935      2396
+   macro avg     0.5896    0.5938    0.5761      2396
+weighted avg     0.5895    0.5935    0.5760      2396
+
+              precision    recall  f1-score   support
+
+           0     0.5976    0.4891    0.5379       826
+           1     0.5597    0.3953    0.4633       759
+           2     0.6132    0.8952    0.7278       811
+
+    accuracy                         0.5968      2396
+   macro avg     0.5902    0.5932    0.5764      2396
+weighted avg     0.5909    0.5968    0.5786      2396
+
+Macro-F1 avg: 0.5812443726625995
+Accuracy avg: 0.5986482128815722

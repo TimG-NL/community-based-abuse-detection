@@ -1,0 +1,53 @@
+############ New model #############
+['binary', '1', 'tfidf', 'NA', '6000', '12000', 'NA']
+Classification_type: binary
+		Inputtype: tfidf
+		Experiment_number: 1
+		Data_source: reddit_distant
+		Batch_dist: 6000
+		Batch_train_file: 12000
+		Gold_train_file: NA
+		Embeddings_source: NA
+		
+##### Loaded in training data #####
+svm-binary-1-tfidf-NA-reddit_distant-600012000.joblib
+##### Training Model #####
+############ Done training model #############
+##### Loaded in test sets #####
+              precision    recall  f1-score   support
+
+           0     0.9231    0.0774    0.1429       620
+           1     0.2912    0.9833    0.4493       239
+
+    accuracy                         0.3295       859
+   macro avg     0.6071    0.5303    0.2961       859
+weighted avg     0.7473    0.3295    0.2281       859
+
+              precision    recall  f1-score   support
+
+           0     0.9818    0.0792    0.1465       682
+           1     0.2199    0.9944    0.3601       178
+
+    accuracy                         0.2686       860
+   macro avg     0.6008    0.5368    0.2533       860
+weighted avg     0.8241    0.2686    0.1907       860
+
+              precision    recall  f1-score   support
+
+           0     0.7675    0.0623    0.1153      2807
+           1     0.2807    0.9509    0.4334      1080
+
+    accuracy                         0.3092      3887
+   macro avg     0.5241    0.5066    0.2744      3887
+weighted avg     0.6323    0.3092    0.2037      3887
+
+              precision    recall  f1-score   support
+
+           0     0.8978    0.0978    0.1763      1708
+           1     0.3514    0.9778    0.5170       854
+
+    accuracy                         0.3911      2562
+   macro avg     0.6246    0.5378    0.3467      2562
+weighted avg     0.7157    0.3911    0.2899      2562
+
+######## Writing output to csv ########

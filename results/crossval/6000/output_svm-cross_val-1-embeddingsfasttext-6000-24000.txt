@@ -1,0 +1,121 @@
+############ New model #############
+Classification_type: binary
+		Inputtype: embeddings
+		Experiment_number: 1
+		Data_source: reddit_distant
+		Batch_train_file: 24000
+		Embeddings_source: fasttext
+		
+##### Loaded in training data #####
+########## Loaded fasttext vectors #############
+############ Done converting text to embeddings #############
+              precision    recall  f1-score   support
+
+           0     0.7170    0.5051    0.5927      1570
+           1     0.7891    0.9028    0.8421      3220
+
+    accuracy                         0.7724      4790
+   macro avg     0.7530    0.7039    0.7174      4790
+weighted avg     0.7655    0.7724    0.7604      4790
+
+              precision    recall  f1-score   support
+
+           0     0.7090    0.5066    0.5909      1597
+           1     0.7841    0.8960    0.8363      3193
+
+    accuracy                         0.7662      4790
+   macro avg     0.7465    0.7013    0.7136      4790
+weighted avg     0.7590    0.7662    0.7545      4790
+
+              precision    recall  f1-score   support
+
+           0     0.7128    0.5229    0.6033      1614
+           1     0.7865    0.8929    0.8363      3176
+
+    accuracy                         0.7683      4790
+   macro avg     0.7497    0.7079    0.7198      4790
+weighted avg     0.7617    0.7683    0.7578      4790
+
+              precision    recall  f1-score   support
+
+           0     0.7372    0.5223    0.6114      1595
+           1     0.7918    0.9070    0.8455      3195
+
+    accuracy                         0.7789      4790
+   macro avg     0.7645    0.7146    0.7284      4790
+weighted avg     0.7736    0.7789    0.7675      4790
+
+              precision    recall  f1-score   support
+
+           0     0.7186    0.5047    0.5930      1589
+           1     0.7857    0.9019    0.8398      3200
+
+    accuracy                         0.7701      4789
+   macro avg     0.7522    0.7033    0.7164      4789
+weighted avg     0.7635    0.7701    0.7579      4789
+
+Macro-F1 avg: 0.7191337425781148
+Accuracy avg: 0.7711803798806504
+############ New model #############
+Classification_type: multiclass
+		Inputtype: embeddings
+		Experiment_number: 1
+		Data_source: reddit_distant
+		Batch_train_file: 24000
+		Embeddings_source: fasttext
+		
+##### Loaded in training data #####
+########## Loaded fasttext vectors #############
+############ Done converting text to embeddings #############
+              precision    recall  f1-score   support
+
+           0     0.6392    0.7121    0.6737      1570
+           1     0.6918    0.4860    0.5709      1607
+           2     0.7129    0.8450    0.7733      1613
+
+    accuracy                         0.6810      4790
+   macro avg     0.6813    0.6810    0.6726      4790
+weighted avg     0.6816    0.6810    0.6728      4790
+
+              precision    recall  f1-score   support
+
+           0     0.6340    0.7007    0.6657      1597
+           1     0.6748    0.5111    0.5817      1616
+           2     0.7146    0.8161    0.7620      1577
+
+    accuracy                         0.6747      4790
+   macro avg     0.6745    0.6760    0.6698      4790
+weighted avg     0.6743    0.6747    0.6691      4790
+
+              precision    recall  f1-score   support
+
+           0     0.6311    0.7026    0.6649      1614
+           1     0.6594    0.4788    0.5548      1581
+           2     0.7198    0.8326    0.7721      1595
+
+    accuracy                         0.6720      4790
+   macro avg     0.6701    0.6713    0.6639      4790
+weighted avg     0.6700    0.6720    0.6643      4790
+
+              precision    recall  f1-score   support
+
+           0     0.6493    0.7103    0.6784      1595
+           1     0.6911    0.4906    0.5738      1596
+           2     0.7212    0.8624    0.7855      1599
+
+    accuracy                         0.6879      4790
+   macro avg     0.6872    0.6878    0.6793      4790
+weighted avg     0.6872    0.6879    0.6793      4790
+
+              precision    recall  f1-score   support
+
+           0     0.6276    0.7086    0.6657      1589
+           1     0.6920    0.4943    0.5767      1586
+           2     0.7277    0.8395    0.7796      1614
+
+    accuracy                         0.6818      4789
+   macro avg     0.6824    0.6808    0.6740      4789
+weighted avg     0.6827    0.6818    0.6746      4789
+
+Macro-F1 avg: 0.6719253713476443
+Accuracy avg: 0.679485668923782

@@ -34,11 +34,11 @@ def createFasttextEmbeddingInput(dataset):
 	"""
 	Create file for training the fasttext embeddings
 	"""
-	readfile = "preprocessed_reddit_{}.csv".format(dataset)
+	readfile = "../data/reddit/preprocessed_reddit_{}_large.csv".format(dataset)
 	df = pd.read_csv(readfile, header=0, engine='python')
-	outputfile = "{}_train_fasttext.en".format(dataset)
+	outputfile = "{}_train_fasttext_large.en".format(dataset)
 	with open(outputfile, "a+", encoding='utf-8') as f:
-	    comments = df.iloc[:, 0].values
+	    comments = df.iloc[:, 1].values
 	    for comment in comments:
 	        f.write(str(comment) + "\n")
 
@@ -81,9 +81,9 @@ def preprocessComments(dataset):
 						writer.writerow(row_dict)
 	
 	elif dataset == "abusive":
-		input_file = "../data/reddit/abusive/reddish_201201-201506.csv"
+		input_file = "../data/reddit/abusive/reddish.csv"
 		
-		csvfile = "../data/reddit/preprocessed_reddit_abusive.csv"
+		csvfile = "../data/reddit/preprocessed_reddit_abusive_large.csv"
 		fieldnames = ['subreddit', 'text', 'labels']
 
 		with open(csvfile, "a+", encoding='utf-8') as f:
@@ -105,9 +105,9 @@ def preprocessComments(dataset):
 				
 
 def main():
-	dataset = "non_abusive"
-	preprocessComments(dataset)
-	#createFasttextEmbeddingInput(dataset)
+	dataset = "abusive"
+	#preprocessComments(dataset)
+	createFasttextEmbeddingInput(dataset)
 
 
 if __name__ == '__main__':

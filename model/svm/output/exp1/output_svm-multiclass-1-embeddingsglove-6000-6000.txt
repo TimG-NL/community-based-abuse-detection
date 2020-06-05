@@ -1,0 +1,58 @@
+############ New model #############
+['multiclass', '1', 'embeddings', 'glove', '6000', '6000', 'NA']
+Classification_type: multiclass
+		Inputtype: embeddings
+		Experiment_number: 1
+		Data_source: reddit_distant
+		Batch_dist: 6000
+		Batch_train_file: 6000
+		Gold_train_file: NA
+		Embeddings_source: glove
+		
+##### Loaded in training data #####
+svm-multiclass-1-embeddings-glove-reddit_distant-60006000.joblib
+Loaded 2196016 word vectors.
+############ Done creating glove embeddings #############
+############ Done converting text to embeddings #############
+##### Training Model #####
+############ Done training model #############
+##### Loaded in test sets #####
+              precision    recall  f1-score   support
+
+           0     0.8736    0.5129    0.6463       620
+           1     0.3899    0.8075    0.5259       239
+
+    accuracy                         0.5949       859
+   macro avg     0.6318    0.6602    0.5861       859
+weighted avg     0.7390    0.5949    0.6128       859
+
+              precision    recall  f1-score   support
+
+           0     0.9137    0.5279    0.6691       682
+           1     0.0944    0.3750    0.1508        72
+           2     0.3556    0.6038    0.4476       106
+
+    accuracy                         0.5244       860
+   macro avg     0.4546    0.5022    0.4225       860
+weighted avg     0.7763    0.5244    0.5984       860
+
+              precision    recall  f1-score   support
+
+           0     0.7386    0.4973    0.5944      2807
+           1     0.2934    0.5426    0.3809      1080
+
+    accuracy                         0.5099      3887
+   macro avg     0.5160    0.5200    0.4877      3887
+weighted avg     0.6149    0.5099    0.5351      3887
+
+              precision    recall  f1-score   support
+
+           0     0.8517    0.6495    0.7369      1706
+           1     0.1842    0.2977    0.2275       383
+           2     0.5406    0.7346    0.6229       471
+
+    accuracy                         0.6125      2560
+   macro avg     0.5255    0.5606    0.5291      2560
+weighted avg     0.6946    0.6125    0.6397      2560
+
+######## Writing output to csv ########

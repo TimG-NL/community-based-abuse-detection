@@ -1,0 +1,52 @@
+
+Currently Loaded Modules:
+  1) GCCcore/9.3.0                   7) Tcl/8.6.10-GCCcore-9.3.0
+  2) zlib/1.2.11-GCCcore-9.3.0       8) SQLite/3.31.1-GCCcore-9.3.0
+  3) binutils/2.34-GCCcore-9.3.0     9) XZ/5.2.5-GCCcore-9.3.0
+  4) bzip2/1.0.8-GCCcore-9.3.0      10) GMP/6.2.0-GCCcore-9.3.0
+  5) ncurses/6.2-GCCcore-9.3.0      11) libffi/3.3-GCCcore-9.3.0
+  6) libreadline/8.0-GCCcore-9.3.0  12) Python/3.8.2-GCCcore-9.3.0
+
+ 
+
+Using TensorFlow backend.
+['binary', '1', 'tfidf', 'NA', '4000', '8000', 'NA']
+##### Training Model #####
+
+
+###############################################################################
+Peregrine Cluster
+Job 11886809 for user 's2769670'
+Finished at: Thu Jun  4 01:43:11 CEST 2020
+
+Job details:
+============
+
+Name                : CrossValTesting
+User                : s2769670
+Partition           : regular
+Nodes               : pg-node178
+Cores               : 2
+State               : COMPLETED
+Submit              : 2020-06-04T01:13:18
+Start               : 2020-06-04T01:41:38
+End                 : 2020-06-04T01:43:11
+Reserved walltime   : 03:00:00
+Used walltime       : 00:01:33
+Used CPU time       : 00:01:32 (efficiency: 49.84%)
+% User (Computation): 97.99%
+% System (I/O)      :  2.01%
+Mem reserved        : 16G/node
+Max Mem used        : 426.73M (pg-node178)
+Max Disk Write      : 40.96K (pg-node178)
+Max Disk Read       : 3.01M (pg-node178)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################

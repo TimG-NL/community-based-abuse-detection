@@ -1,0 +1,24 @@
+
+# Data Collection and extraction
+1. Extract data from Reddit zipfiles (no_sub_file_scanner.py) (non-abusive) -->
+	year/reddish_year-month.csv (250000 comments per month)
+
+2. Extract comments from csv files (commentPreprocessing.py) --> 
+	preprocessed_abusive.csv, preprocessed_non_abusive.csv
+
+3. Create trainingdata (clean_data_create_training_batches.py) -->
+	batch_train_6000*n.csv (2000, 2000, 2000)
+	batch_train_4000*n.csv (2000, 1000, 1000)
+4. 
+
+
+# Embeddings
+2.5 Create embeddings from outputfiles step 2. (createEmbeddings.py)
+2.5.1 Inspect embeddings (inspectEmbeddings.py)
+
+# Test Data
+1. Clean test data (Preprocess_testdata.py)
+
+# Model Building
+1. SVM -->
+	model/modelSVM.py

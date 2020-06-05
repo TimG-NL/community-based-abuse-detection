@@ -142,7 +142,7 @@ def data_preparation(max_len_sent, data_source):
 
 
 	# Create sequences word -> indexes
-	tokenizer = Tokenizer(oov_token='<UNK>')
+	tokenizer = Tokenizer(oov_token="_UNK")
 	tokenizer.fit_on_texts(x)
 	xtrain = tokenizer.texts_to_sequences(x_train)
 	xtest = tokenizer.texts_to_sequences(x_test)
@@ -168,7 +168,7 @@ Load in the pretrained embeddings
 """
 def load_fasttext_embeddings(tokenizer, vocab_size):
 	embeddings_na = fasttext.load_model("../../data/embeddings/fasttext/embeddings_non_abusive_1_2_300.model")
-	embeddings_a = fasttext.load_model("../../data/embeddings/fasttext/embeddings_abusive_1_2_300.model")
+	embeddings_a = fasttext.load_model("../../data/embeddings/fasttext/embeddings_abusive_1_2_300_large.model")
 
 
 	non_abusive_matrix = glove_matrix = np.zeros((vocab_size, 300)) #Dimension vector in embeddings
@@ -237,7 +237,8 @@ def LSTMmodel(vocab_size, maxlen, embedding_source, list_embedding_matrix):
 								output_dim=embedding_dim,
 								input_length=maxlen,
 								weights=[glove_weights],
-								trainable=False)(sentence_input)
+								trainable=False,
+								mask_zero=True)(sentence_input)
 		
 	elif embedding_source == 'fasttext':
 		non_abusive_weights = list_embedding_matrix[0]
@@ -251,7 +252,8 @@ def LSTMmodel(vocab_size, maxlen, embedding_source, list_embedding_matrix):
 								output_dim=embedding_dim,
 								input_length=maxlen,
 								weights=[combined_weigths],
-								trainable=False)(sentence_input)
+								trainable=False,
+								mask_zero=True)(sentence_input)
 
 	first_bilstm_layer = Bidirectional(LSTM(128, return_sequences=True))(embeddings)
 	second_bilstm_layer = Bidirectional(LSTM(64, return_sequences=True))(first_bilstm_layer)

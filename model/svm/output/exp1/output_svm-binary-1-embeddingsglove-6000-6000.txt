@@ -1,0 +1,56 @@
+############ New model #############
+['binary', '1', 'embeddings', 'glove', '6000', '6000', 'NA']
+Classification_type: binary
+		Inputtype: embeddings
+		Experiment_number: 1
+		Data_source: reddit_distant
+		Batch_dist: 6000
+		Batch_train_file: 6000
+		Gold_train_file: NA
+		Embeddings_source: glove
+		
+##### Loaded in training data #####
+svm-binary-1-embeddings-glove-reddit_distant-60006000.joblib
+Loaded 2196016 word vectors.
+############ Done creating glove embeddings #############
+############ Done converting text to embeddings #############
+##### Training Model #####
+############ Done training model #############
+##### Loaded in test sets #####
+              precision    recall  f1-score   support
+
+           0     0.9143    0.2065    0.3368       620
+           1     0.3157    0.9498    0.4739       239
+
+    accuracy                         0.4133       859
+   macro avg     0.6150    0.5781    0.4054       859
+weighted avg     0.7477    0.4133    0.3750       859
+
+              precision    recall  f1-score   support
+
+           0     0.9551    0.2185    0.3556       682
+           1     0.2429    0.9607    0.3878       178
+
+    accuracy                         0.3721       860
+   macro avg     0.5990    0.5896    0.3717       860
+weighted avg     0.8077    0.3721    0.3623       860
+
+              precision    recall  f1-score   support
+
+           0     0.7502    0.3007    0.4293      2807
+           1     0.2893    0.7398    0.4159      1080
+
+    accuracy                         0.4227      3887
+   macro avg     0.5198    0.5202    0.4226      3887
+weighted avg     0.6222    0.4227    0.4256      3887
+
+              precision    recall  f1-score   support
+
+           0     0.9414    0.3294    0.4881      1706
+           1     0.4172    0.9590    0.5815       854
+
+    accuracy                         0.5395      2560
+   macro avg     0.6793    0.6442    0.5348      2560
+weighted avg     0.7665    0.5395    0.5192      2560
+
+######## Writing output to csv ########

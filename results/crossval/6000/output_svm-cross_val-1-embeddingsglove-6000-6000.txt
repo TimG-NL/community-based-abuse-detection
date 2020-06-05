@@ -1,0 +1,123 @@
+############ New model #############
+Classification_type: multiclass
+		Inputtype: embeddings
+		Experiment_number: 1
+		Data_source: reddit_distant
+		Batch_train_file: 6000
+		Embeddings_source: glove
+		
+##### Loaded in training data #####
+Loaded 2196016 word vectors.
+############ Done creating glove embeddings #############
+############ Done converting text to embeddings #############
+              precision    recall  f1-score   support
+
+           0     0.6010    0.6171    0.6089       410
+           1     0.5959    0.4307    0.5000       404
+           2     0.6784    0.8568    0.7572       384
+
+    accuracy                         0.6311      1198
+   macro avg     0.6251    0.6348    0.6220      1198
+weighted avg     0.6241    0.6311    0.6197      1198
+
+              precision    recall  f1-score   support
+
+           0     0.5859    0.6451    0.6141       386
+           1     0.5687    0.3911    0.4635       381
+           2     0.6810    0.8074    0.7389       431
+
+    accuracy                         0.6227      1198
+   macro avg     0.6119    0.6145    0.6055      1198
+weighted avg     0.6146    0.6227    0.6111      1198
+
+              precision    recall  f1-score   support
+
+           0     0.5350    0.6562    0.5895       384
+           1     0.6327    0.3621    0.4606       428
+           2     0.6757    0.8442    0.7506       385
+
+    accuracy                         0.6115      1197
+   macro avg     0.6145    0.6209    0.6002      1197
+weighted avg     0.6152    0.6115    0.5952      1197
+
+              precision    recall  f1-score   support
+
+           0     0.5756    0.6250    0.5993       408
+           1     0.5585    0.3756    0.4492       394
+           2     0.6524    0.8076    0.7217       395
+
+    accuracy                         0.6032      1197
+   macro avg     0.5955    0.6027    0.5901      1197
+weighted avg     0.5953    0.6032    0.5903      1197
+
+              precision    recall  f1-score   support
+
+           0     0.6014    0.6402    0.6202       403
+           1     0.6162    0.4487    0.5193       390
+           2     0.6901    0.8267    0.7523       404
+
+    accuracy                         0.6408      1197
+   macro avg     0.6359    0.6385    0.6306      1197
+weighted avg     0.6362    0.6408    0.6319      1197
+
+Macro-F1 avg: 0.6096698147252103
+Accuracy avg: 0.6218456547601614
+############ New model #############
+Classification_type: binary
+		Inputtype: embeddings
+		Experiment_number: 1
+		Data_source: reddit_distant
+		Batch_train_file: 6000
+		Embeddings_source: glove
+		
+##### Loaded in training data #####
+Loaded 2196016 word vectors.
+############ Done creating glove embeddings #############
+############ Done converting text to embeddings #############
+              precision    recall  f1-score   support
+
+           0     0.6990    0.3341    0.4521       410
+           1     0.7275    0.9251    0.8145       788
+
+    accuracy                         0.7229      1198
+   macro avg     0.7133    0.6296    0.6333      1198
+weighted avg     0.7178    0.7229    0.6905      1198
+
+              precision    recall  f1-score   support
+
+           0     0.6854    0.3161    0.4326       386
+           1     0.7412    0.9310    0.8253       812
+
+    accuracy                         0.7329      1198
+   macro avg     0.7133    0.6235    0.6290      1198
+weighted avg     0.7232    0.7329    0.6988      1198
+
+              precision    recall  f1-score   support
+
+           0     0.6651    0.3724    0.4775       384
+           1     0.7546    0.9114    0.8256       813
+
+    accuracy                         0.7385      1197
+   macro avg     0.7098    0.6419    0.6515      1197
+weighted avg     0.7259    0.7385    0.7139      1197
+
+              precision    recall  f1-score   support
+
+           0     0.6731    0.3431    0.4545       408
+           1     0.7290    0.9138    0.8110       789
+
+    accuracy                         0.7193      1197
+   macro avg     0.7010    0.6285    0.6328      1197
+weighted avg     0.7100    0.7193    0.6895      1197
+
+              precision    recall  f1-score   support
+
+           0     0.7766    0.3623    0.4941       403
+           1     0.7453    0.9471    0.8342       794
+
+    accuracy                         0.7502      1197
+   macro avg     0.7609    0.6547    0.6641      1197
+weighted avg     0.7558    0.7502    0.7197      1197
+
+Macro-F1 avg: 0.6421523347781996
+Accuracy avg: 0.7327559298915067
