@@ -42,10 +42,10 @@ def loadTrainingData(data_source, batch_dist, batch_train_file, gold_train_file,
 
 	# Map explicit and implicit to 0,1 if classification_type == binary
 	if classification_type == 'binary':
-		mapping_dict = {'NOT': 0, 'IMP' : 1, 'EXP' : 1}
+		mapping_dict = {'NOT': 0, 'IMP' : 1, 'EXP' : 1, '0': 0, '1': 1, '2': 1}
 	# Else multi-class classification
 	else:
-		mapping_dict = {'NOT': 0, 'IMP' : 1, 'EXP' : 2}
+		mapping_dict = {'NOT': 0, 'IMP' : 1, 'EXP' : 2, '0': 0, '1': 1, '2': 2}
 
 
 	if data_source == "reddit_distant" or data_source == 'reddit+gold':
@@ -498,7 +498,7 @@ def main(argv):
 	fields=['date','experiment','classification_type', 'input_type', 
 			'data_source', 'batch_train_file', 'embedding_source', 'testdata', 'accuracy_score', 'macro-f1', 
 			'label', 'precision', 'recall', 'f1-score', 'support']
-	csvfile = open('../../results/exp{}_svm_results_.csv'.format(experiment_number), 'a+')
+	csvfile = open('../../results/exp{}_svm_results.csv'.format(experiment_number), 'a+')
 	
 	writer = csv.DictWriter(csvfile, fieldnames = fields)    
 	writer.writeheader()

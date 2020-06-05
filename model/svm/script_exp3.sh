@@ -1,11 +1,11 @@
 #!/bin/bash
 #SBATCH --job-name=AbuseDetectionExperiment3
-#SBATCH --partition=vulture
+#SBATCH --partition=regular
 #SBATCH --nodes=1
 #SBATCH --mem=16GB
 #SBATCH --cpus-per-task=2
-#SBATCH --time=07:00:00
-#SBATCH --array=1-1
+#SBATCH --time=12:00:00
+#SBATCH --array=1-30
 #SBATCH --output=prints/experiment3/slurm-%A_%a.out
 
 module purge

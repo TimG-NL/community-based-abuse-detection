@@ -1,0 +1,159 @@
+############ New model #############
+['binary', '2', 'tfidf', 'NA', 'NA', 'NA', 'abuseval']
+Classification_type: binary
+		Inputtype: tfidf
+		Experiment_number: 2
+		Data_source: gold_train
+		Batch_dist: NA
+		Batch_train_file: NA
+		Gold_train_file: ../../data/training/gold_train/train_abuseval.csv
+		Embeddings_source: NA
+		
+##### Loaded in training data #####
+svm-binary-2-tfidf-NA-gold_train-abuseval.joblib
+##### Training Model #####
+############ Done training model #############
+##### Loaded in test sets #####
+              precision    recall  f1-score   support
+
+           0     0.7260    1.0000    0.8412       620
+           1     1.0000    0.0209    0.0410       239
+
+    accuracy                         0.7276       859
+   macro avg     0.8630    0.5105    0.4411       859
+weighted avg     0.8022    0.7276    0.6186       859
+
+              precision    recall  f1-score   support
+
+           0     0.7965    0.9985    0.8861       682
+           1     0.8000    0.0225    0.0437       178
+
+    accuracy                         0.7965       860
+   macro avg     0.7982    0.5105    0.4649       860
+weighted avg     0.7972    0.7965    0.7118       860
+
+              precision    recall  f1-score   support
+
+           0     0.7230    0.9868    0.8346      2807
+           1     0.3393    0.0176    0.0335      1080
+
+    accuracy                         0.7175      3887
+   macro avg     0.5312    0.5022    0.4340      3887
+weighted avg     0.6164    0.7175    0.6120      3887
+
+              precision    recall  f1-score   support
+
+           0     0.6728    0.9994    0.8042      1708
+           1     0.9600    0.0281    0.0546       854
+
+    accuracy                         0.6756      2562
+   macro avg     0.8164    0.5138    0.4294      2562
+weighted avg     0.7686    0.6756    0.5544      2562
+
+######## Writing output to csv ########
+############ New model #############
+['binary', '2', 'tfidf', 'NA', 'NA', 'NA', 'offenseval2019']
+Classification_type: binary
+		Inputtype: tfidf
+		Experiment_number: 2
+		Data_source: gold_train
+		Batch_dist: NA
+		Batch_train_file: NA
+		Gold_train_file: ../../data/training/gold_train/train_offenseval2019.csv
+		Embeddings_source: NA
+		
+##### Loaded in training data #####
+svm-binary-2-tfidf-NA-gold_train-offenseval2019.joblib
+##### Training Model #####
+############ Done training model #############
+##### Loaded in test sets #####
+              precision    recall  f1-score   support
+
+           0     0.9920    1.0000    0.9960       620
+           1     1.0000    0.9791    0.9894       239
+
+    accuracy                         0.9942       859
+   macro avg     0.9960    0.9895    0.9927       859
+weighted avg     0.9942    0.9942    0.9942       859
+
+              precision    recall  f1-score   support
+
+           0     0.9858    0.9179    0.9506       682
+           1     0.7511    0.9494    0.8387       178
+
+    accuracy                         0.9244       860
+   macro avg     0.8685    0.9337    0.8947       860
+weighted avg     0.9372    0.9244    0.9275       860
+
+              precision    recall  f1-score   support
+
+           0     0.7222    1.0000    0.8387      2807
+           1     0.0000    0.0000    0.0000      1080
+
+    accuracy                         0.7222      3887
+   macro avg     0.3611    0.5000    0.4193      3887
+weighted avg     0.5215    0.7222    0.6056      3887
+
+              precision    recall  f1-score   support
+
+           0     0.6669    1.0000    0.8002      1708
+           1     1.0000    0.0012    0.0023       854
+
+    accuracy                         0.6671      2562
+   macro avg     0.8335    0.5006    0.4013      2562
+weighted avg     0.7780    0.6671    0.5342      2562
+
+######## Writing output to csv ########
+############ New model #############
+['binary', '2', 'tfidf', 'NA', 'NA', 'NA', 'abuseval']
+Classification_type: binary
+		Inputtype: tfidf
+		Experiment_number: 2
+		Data_source: gold_train
+		Batch_dist: NA
+		Batch_train_file: NA
+		Gold_train_file: ../../data/training/gold_train/train_abuseval.csv
+		Embeddings_source: NA
+		
+##### Loaded in training data #####
+svm-binary-2-tfidf-NA-gold_train-abuseval.joblib
+##### Training Model #####
+############ Done training model #############
+##### Loaded in test sets #####
+              precision    recall  f1-score   support
+
+           0     0.7260    1.0000    0.8412       620
+           1     1.0000    0.0209    0.0410       239
+
+    accuracy                         0.7276       859
+   macro avg     0.8630    0.5105    0.4411       859
+weighted avg     0.8022    0.7276    0.6186       859
+
+              precision    recall  f1-score   support
+
+           0     0.7965    0.9985    0.8861       682
+           1     0.8000    0.0225    0.0437       178
+
+    accuracy                         0.7965       860
+   macro avg     0.7982    0.5105    0.4649       860
+weighted avg     0.7972    0.7965    0.7118       860
+
+              precision    recall  f1-score   support
+
+           0     0.7230    0.9868    0.8346      2807
+           1     0.3393    0.0176    0.0335      1080
+
+    accuracy                         0.7175      3887
+   macro avg     0.5312    0.5022    0.4340      3887
+weighted avg     0.6164    0.7175    0.6120      3887
+
+              precision    recall  f1-score   support
+
+           0     0.6728    0.9994    0.8042      1708
+           1     0.9600    0.0281    0.0546       854
+
+    accuracy                         0.6756      2562
+   macro avg     0.8164    0.5138    0.4294      2562
+weighted avg     0.7686    0.6756    0.5544      2562
+
+######## Writing output to csv ########
