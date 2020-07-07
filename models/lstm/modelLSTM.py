@@ -201,8 +201,8 @@ def data_preparation(max_len_sent, data_source, distribution, batch_train_file, 
 Load in the pretrained embeddings
 """
 def load_fasttext_embeddings(tokenizer, vocab_size):
-	embeddings_na = fasttext.load_model("/data/s2769670/scriptie/embeddings/fasttext/embeddings_non_abusive_1_2_300.model")
-	embeddings_a = fasttext.load_model("/data/s2769670/scriptie/embeddings/fasttext/embeddings_abusive_1_2_300_large.model")
+	embeddings_na = fasttext.load_model("../../data/embeddings/fasttext/embeddings_non_abusive_1_2_300.model")
+	embeddings_a = fasttext.load_model("../../data/embeddings/fasttext/embeddings_abusive_1_2_300_large.model")
 
 
 	non_abusive_matrix = glove_matrix = np.zeros((vocab_size, 300)) #Dimension vector in embeddings
@@ -229,7 +229,7 @@ def load_fasttext_embeddings(tokenizer, vocab_size):
 
 def load_glove_embeddings(tokenizer, vocab_size):
 	glove_dict = dict()
-	with open('/data/s2769670/scriptie/embeddings/glove/glove.840B.300d.txt', 'r', encoding='utf8' ) as f:
+	with open('../../data/embeddings/glove/glove.840B.300d.txt', 'r', encoding='utf8' ) as f:
 		for line in f:
 			values = line.split(' ')
 			try:
@@ -437,7 +437,7 @@ def main(argv):
 
 	# Check whether model has already been trained or not
 	existing_models = []
-	for (_, _, filenames) in walk('/data/s2769670/scriptie/models_saved/lstm/exp{}/models/'.format(experiment_number)):
+	for (_, _, filenames) in walk('../models_saved/lstm/exp{}/models/'.format(experiment_number)):
 		existing_models.extend(filenames)
 		break
 
@@ -451,7 +451,7 @@ def main(argv):
 		print("Training new model!", file=text_file)
 	# Load existing model
 	else:
-		with open("/data/s2769670/scriptie/models_saved/lstm/exp{}/tokenizers/{}".format(experiment_number, tokenizer_name), 'rb') as handle:
+		with open("../models_saved/lstm/exp{}/tokenizers/{}".format(experiment_number, tokenizer_name), 'rb') as handle:
 			tokenizer = pickle.load(handle)
 		vocab_size = len(tokenizer.word_index) + 1
 		print("Loading old model!", file=text_file)
@@ -470,15 +470,15 @@ def main(argv):
 		################ Build the model
 		model = LSTMmodel(classification_type, experiment_number, vocab_size, max_len_sent, embedding_source, list_embedding_matrix)
 		################ Train the model
-		filepath = "/data/s2769670/scriptie/models_saved/lstm/exp{}/models/{}".format(experiment_number, model_name)
+		filepath = "../models_saved/lstm/exp{}/models/{}".format(experiment_number, model_name)
 		model = train_model(model, x_train, y_train, x_dev, y_dev, filepath)
 
 		# Load best model
 		with CustomObjectScope({'AttentionWithContext': AttentionWithContext}):
-			model = load_model("/data/s2769670/scriptie/models_saved/lstm/exp{}/models/{}".format(experiment_number, model_name))
+			model = load_model("../models_saved/lstm/exp{}/models/{}".format(experiment_number, model_name))
 	else:
 		with CustomObjectScope({'AttentionWithContext': AttentionWithContext}):
-			model = load_model("/data/s2769670/scriptie/models_saved/lstm/exp{}/models/{}".format(experiment_number, model_name))
+			model = load_model("../models_saved/lstm/exp{}/models/{}".format(experiment_number, model_name))
 	################ Evaluation
 	#x_test, y_test = load_evaluation_data(tokenizer, max_len_sent)
 	#evaluation(model, x_train, y_train, x_test, y_test)
@@ -514,7 +514,7 @@ def main(argv):
 	fields=['date','experiment','classification_type', 'embedding_source',
 			'data_source', 'distribution','batch_size', 'gold_train_file', 'testdata', 'accuracy_score', 'macro-f1', 
 			'label', 'precision', 'recall', 'f1-score', 'support']
-	csvfile = open('../../results/exp{}_lstm_results.csv'.format(experiment_number), 'a+')
+	csvfile = open('exp{}_lstm_results.csv'.format(experiment_number), 'a+')
 	
 	writer = csv.DictWriter(csvfile, fieldnames = fields)    
 	writer.writeheader()

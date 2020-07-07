@@ -215,7 +215,7 @@ def evaluation(text_clf, x_test, y_test, classification_type, testset):
 """
 def load_glove_embeddings(tokenizer, vocab_size):
 	glove_dict = dict()
-	with open('/data/s2769670/scriptie/embeddings/glove/glove.840B.300d.txt', 'r', encoding='utf8' ) as f:
+	with open('../../data/embeddings/glove/glove.840B.300d.txt', 'r', encoding='utf8' ) as f:
 		for line in f:
 			values = line.split(' ')
 			try:
@@ -244,8 +244,8 @@ def load_glove_embeddings(tokenizer, vocab_size):
 
 def load_fasttext_embeddings(tokenizer, vocab_size):
 	# /data/s2769670/scriptie/
-	embeddings_na = fasttext.load_model("/data/s2769670/scriptie/embeddings/fasttext/embeddings_non_abusive_1_2_300.model")
-	embeddings_a = fasttext.load_model("/data/s2769670/scriptie/embeddings/fasttext/embeddings_abusive_1_2_300_large.model")
+	embeddings_na = fasttext.load_model("../../data/embeddings/fasttext/embeddings_non_abusive_1_2_300.model")
+	embeddings_a = fasttext.load_model("../../data/embeddings/fasttext/embeddings_abusive_1_2_300_large.model")
 
 
 	non_abusive_matrix = glove_matrix = np.zeros((vocab_size, 300)) #Dimension vector in embeddings
@@ -299,12 +299,12 @@ def create_embeddings(x_train, embedding_source, experiment_number, model, exist
 		# Create sequences word -> indexes
 		tokenizer = Tokenizer(oov_token='<UNK>')
 		tokenizer.fit_on_texts(x_train)
-		with open("/data/s2769670/scriptie/models_saved/svm/exp{}/tokenizers/{}".format(experiment_number, tokenizer_name), 'wb') as handle:
+		with open("../models_saved/svm/exp{}/tokenizers/{}".format(experiment_number, tokenizer_name), 'wb') as handle:
 				pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
 		print("Training new model!")
 	# Load existing model
 	else:
-		with open("/data/s2769670/scriptie/models_saved/svm/exp{}/tokenizers/{}".format(experiment_number, tokenizer_name), 'rb') as handle:
+		with open("../models_saved/svm/exp{}/tokenizers/{}".format(experiment_number, tokenizer_name), 'rb') as handle:
 			tokenizer = pickle.load(handle)
 		vocab_size = len(tokenizer.word_index) + 1
 		print("Loading old model!")
@@ -476,7 +476,7 @@ def main(argv):
 		else:
 			# Check for existing models else train a new model
 			if model in existing_models:
-				text_clf = load('/data/s2769670/scriptie/models_saved/svm/exp{}/models/{}'.format(experiment_number, model))
+				text_clf = load('../models_saved/svm/exp{}/models/{}'.format(experiment_number, model))
 				print("Loaded saved model", file=text_file)
 			else:
 				# Train classifier
@@ -484,7 +484,7 @@ def main(argv):
 
 				# Save model
 				# /data/s2769670/scriptie/
-				dump(text_clf, '/data/s2769670/scriptie/models_saved/svm/exp{}/models/{}'.format(experiment_number, model))
+				dump(text_clf, '../models_saved/svm/exp{}/models/{}'.format(experiment_number, model))
 		
 			# Load all testdata
 			test_dict = loadTestData(classification_type)
@@ -530,13 +530,13 @@ def main(argv):
 		else:
 			# Check for existing models else train a new model
 			if model in existing_models:
-				text_clf = load('/data/s2769670/scriptie/models_saved/svm/exp{}/models/{}'.format(experiment_number, model))
+				text_clf = load('../models_saved/svm/exp{}/models/{}'.format(experiment_number, model))
 			else:
 				# Train classifier
 				text_clf = train_model(x_train, y_train, input_type)
 
 				# Save model
-				dump(text_clf, '/data/s2769670/scriptie/models_saved/svm/exp{}/models/{}'.format(experiment_number, model))
+				dump(text_clf, '../models_saved/svm/exp{}/models/{}'.format(experiment_number, model))
 			
 			# Load all testdata
 			test_dict = loadTestData(classification_type)
@@ -560,7 +560,7 @@ def main(argv):
 		# Open csv file for output program
 		print("######## Writing output to csv ########", file=text_file)
 		fields=['date', 'classification_type', 'input_type', 'embedding_source', 'train_distribution', 'batch_size','cross_val_accuracy', 'cross_val_macro-f1', 'distant252550_accuracy', 'distant252550_macro-f1', 'distant333333_accuracy', 'distant333333_macro-f1']
-		csvfile = open('../../results/crossval_svm_results.csv', 'a+')
+		csvfile = open('crossval_svm_results.csv', 'a+')
 		writer = csv.DictWriter(csvfile, fieldnames = fields)    
 		writer.writeheader()
 
@@ -588,7 +588,7 @@ def main(argv):
 		fields=['date','experiment','classification_type', 'input_type', 
 				'data_source', 'train_distribution', 'batch_size', 'gold_train_file', 'embedding_source', 'testdata', 'accuracy_score', 'macro-f1', 
 				'label', 'precision', 'recall', 'f1-score', 'support']
-		csvfile = open('../../results/exp{}_svm_results.csv'.format(experiment_number), 'a+')
+		csvfile = open('results/exp{}_svm_results.csv'.format(experiment_number), 'a+')
 		
 		writer = csv.DictWriter(csvfile, fieldnames = fields)    
 		writer.writeheader()
