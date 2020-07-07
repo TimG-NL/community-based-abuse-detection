@@ -9,6 +9,7 @@ model/predictions/
 *.h5
 *.en
 *.in
+*.sh
 preprocessing/preprocessed_reddit_non_abusive.csv
 preprocessing/preprocessed_reddit_abusive.csv
 *.model
