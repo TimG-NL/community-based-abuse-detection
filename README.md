@@ -1,8 +1,15 @@
-# community-based-abuse-detection
+Readme file not completely ready yet!
 
-GitHub not up-to-date yet!!
+# Community-based Abuse Detection
 
-Need to remove private paths in files
+In this repository you will find the code for the Master's Thesis: "Community
 
 
-Readme will follow
+
+
+# Repository structure
+
+### README.md
+Description of the repository.
+### requirements.txt
+Required Python packages necessary for running the program.
