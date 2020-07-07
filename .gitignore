@@ -7,10 +7,12 @@ model/predictions/
 # Large Files #
 ###################
 *.h5
+*.en
+*.in
 preprocessing/preprocessed_reddit_non_abusive.csv
 preprocessing/preprocessed_reddit_abusive.csv
-
-
+*.model
+glove.840B.300d.txt
 
 # Compiled source #
 ###################
