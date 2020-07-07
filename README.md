@@ -1,4 +1,4 @@
-Readme file not completely ready yet!
+Readme file not finished yet!
 
 # Community-based Abuse Detection
 
