@@ -45,30 +45,60 @@ Creates annotation data for groups of students with common and individual messag
 ### /annotations/collect_test_comments_students.py
 Extracts test comments from Reddit archive files.
 ### /annotations/evaluate_students_annotations.py
-Combines all annotations and calculates fleiss kappa within groups of annotators, writes final labels to output/
+Combines all annotations and calculates fleiss kappa within groups of annotators, writes final labels to output.
 
 ### /collection/extract_non_abusive
 Folder that contains code to extract non-abusive messages from Reddit archive files.
 ### /collection/extract_non_abusive/collect_non-abusive_messages.py
 Code to extract non-abusive messages from Reddit archive files.
 ### /collection/extract_non_abusive/expandedLexicon.txt
-Lexicon used to filter explicit messages from abusive communities
+Lexicon used to filter explicit messages from abusive communities.
 ### /collection/extract_non_abusive/subreddit_statistics.tsv
-List of abusive communities
+List of abusive communities.
 
 ### /data
-Folder that contains training and test data for the project
+Folder that contains training and test data for the project.
 ### /data/training/
-Folder that contains training data
+Folder that contains training data.
 ### /data/training/batches
-Folder that contains the distant training data with 25-25-50 and 33-33-33 distributions of labels
+Folder that contains the distant training data with 25-25-50 and 33-33-33 distributions of labels.
 ### /data/training/gold_train
-Folder that contains the gold training data files: AbusEval and OffensEval2019
+Folder that contains the gold training data files: AbusEval and OffensEval2019.
 ### /data/test
-Folder that contains all test data for the experiments
+Folder that contains all test data for the experiments.
+### /data/clean_data_create_training_batches.py
+Filters and creates distant training data sets and distant test sets.
+
+### /models
+Folder that contains LSTM and SVM folders.
+### /models/lstm
+Folder that contains code for building the Bi-LSTM models.
+### /models/lstm/modelLSTM.py
+Builds a Bi-LSTM model.
+### /models/svm
+Folder that contains code for building the SVM models.
+### /models/svm/modelSVM.py
+Contains code for SVM models and cross_validation experiments.
+
+### /preprocessing
+Folder that contains file for preprocessing and fastText input generation.
+### /preprocessing/preprocessTrainingfiles_generateFasttextinput.py
+File that cleans the reddit data and generates inputfiles necessary for the creation of fastText embeddings.
+
+### /stats
+Folder that contains extra data checks and analysis
+### /stats/subreddits
+Folder that contains text files that list which subreddits are used in which dataset.
+### /stats/check_training_test_data.ipynb
+File that checks the integrety and completeness of the datafiles
+### /stats/reddit_abusive.ipynb
+File that gathers statistics about the abusive data
+### /stats/reddit_non-abusive_stats.ipynb
+File that gathers statistics about the non-abusive data
+
 
 
 # Usage of models via command line
-$ python3 modelSVM <classification_type>-<exp_number>-<>
+## Experiment 1
 
 
