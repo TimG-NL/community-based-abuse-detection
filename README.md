@@ -102,28 +102,34 @@ File that gathers statistics about the non-abusive data
 ## Experiment 1
 ### SVM
 $ python3 modelSVM.py <classification_type>-<exp_number>-<input_type>-<embeddings_source>-<distribution>-<batch_size>-<gold_data>
+  
 $ python3 modelSVM.py multiclass-1-tfidf-fasttext-252550-24000-NA
   
 ### LSTM
 $ python3 modelLSTM.py <classification_type>-<exp_number>-<embeddings_source>-<distribution>-<batch_size>-<gold_data>
+  
 $ python3 modelLSTM.py binary-1-fasttext-333333-48000-NA
   
   
 ## Experiment 2
 ### SVM
 $ python3 modelSVM.py <classification_type>-<exp_number>-<input_type>-<embeddings_source>-<distribution>-<batch_size>-<gold_data>
+  
 $ python3 modelSVM.py multiclass-2-embeddings-fasttext-NA-NA-offenseval2019
   
 ### LSTM
 $ python3 modelLSTM.py <classification_type>-<exp_number>-<embeddings_source>-NA-NA-<gold_data>
+
 $ python3 modelLSTM.py multiclass-2-glove-NA-NA-abuseval
 
 
 ## Experiment 3
   ### SVM
 $ python3 modelSVM.py <classification_type>-<exp_number>-<input_type>-<embeddings_source>-<distribution>-<batch_size>-<gold_data>
+  
 $ python3 modelSVM.py binary-3-embeddings-glove-NA-NA-abuseval
   ### LSTM
 $ python3 modelLSTM.py <classification_type>-<exp_number>-<embeddings_source>-<distribution>-<batch_size>-<gold_data>
+  
 $ python3 modelLSTM.py multiclass-3-fasttext-333333-12000-offenseval2019
 
