@@ -18,8 +18,8 @@ This study confirms that data coming from abusive and non-abusive communities ca
 
 ## Embeddings
 - [GloVe Common Crawl (840B tokens)](https://nlp.stanford.edu/projects/glove/)
-- [Abusive Reddit Embeddings](https://mega.nz/file/rVo33YZQ)
-- [Non-abusive Reddit Embeddings](https://mega.nz/file/fVhhXICb)
+- [Abusive Reddit Embeddings](https://mega.nz/file/rVo33YZQ#reHxzIQduvYd33wF5xjp9OtWzvwa2--aDeWT4FsoAYo)
+- [Non-abusive Reddit Embeddings](https://mega.nz/file/fVhhXICb#WMP-qmGxQ7icJy9pSlPnRk00DcAuCr4b8rmfyd20m80)
 
 
 # Data Statement ([Bender and Friedman, 2018](https://www.mitpressjournals.org/doi/abs/10.1162/tacl_a_00041))
