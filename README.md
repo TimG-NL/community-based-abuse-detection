@@ -8,6 +8,20 @@ The goal of this thesis is to find out whether data coming from abusive communit
 The community-based data are collected from hateful communities and 'normal' subreddits on Reddit. With this data, we create distant datasets and generate task-specific polerized embeddings which are used to train abuse detection models. These models are tested both on an in-domain test set created in this research and on existing cross-domain test sets. 
 This study confirms that data coming from abusive and non-abusive communities can be used for the detection of abusive language. The results indicate that models learn to classify abuse from silver distant training data (even though they still get outperformed by smaller gold training data). Furthermore, models that use pre-trained biased abusive embeddings generated from this data are showing competitive results when compared against much larger pre-trained generic embeddings.
 
+
+# Data used in this research
+## Training and Testing Data
+- [AbusEval](https://github.com/tommasoc80/AbuseEval)
+- [OffensEval 2019 Task A](https://competitions.codalab.org/competitions/20011)
+- [OffensEval 2020 Task A](https://sites.google.com/site/offensevalsharedtask/results-and-paper-submission)
+
+
+## Embeddings
+- [GloVe Common Crawl (840B tokens)](https://nlp.stanford.edu/projects/glove/)
+- [Abusive Reddit Embeddings](https://mega.nz/file/rVo33YZQ)
+- [Non-abusive Reddit Embeddings](https://mega.nz/file/fVhhXICb)
+
+
 # Data Statement ([Bender and Friedman, 2018](https://www.mitpressjournals.org/doi/abs/10.1162/tacl_a_00041))
 
 Data in the Gold Reddit test set has been collected from the medium Reddit and the language of the messages is English. The annotation of the explicit, implicit and non-abusive labels have been conducted by a group of first-year Information Science Bachelor students and the author of this paper. The annotators group consisted of 31 men and 10 women. Out of this group 21 students have previous experience with annotating documents and 19 students did not have any previous experience. The average age is 21.025 years and ranges between the ages of 18 and 42. All annotators have the Dutch nationality. 
@@ -52,4 +66,9 @@ Folder that contains the distant training data with 25-25-50 and 33-33-33 distri
 Folder that contains the gold training data files: AbusEval and OffensEval2019
 ### /data/test
 Folder that contains all test data for the experiments
+
+
+# Usage of models via command line
+$ python3 modelSVM <classification_type>-<exp_number>-<>
+
 
