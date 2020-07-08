@@ -8,9 +8,6 @@ The goal of this thesis is to find out whether data coming from abusive communit
 The community-based data are collected from hateful communities and 'normal' subreddits on Reddit. With this data, we create distant datasets and generate task-specific polerized embeddings which are used to train abuse detection models. These models are tested both on an in-domain test set created in this research and on existing cross-domain test sets. 
 This study confirms that data coming from abusive and non-abusive communities can be used for the detection of abusive language. The results indicate that models learn to classify abuse from silver distant training data (even though they still get outperformed by smaller gold training data). Furthermore, models that use pre-trained biased abusive embeddings generated from this data are showing competitive results when compared against much larger pre-trained generic embeddings.
 
-Gerben Timmerman
-July 8th, 2020
-
 
 # Data used in this research
 ## Training and Testing Data
