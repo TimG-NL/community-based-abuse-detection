@@ -1,5 +1,3 @@
-Readme file not finished yet!
-
 # Community-based Abuse Detection
 
 In this repository you will find the code for the Master's Thesis: "Community-based Abuse Detection: Using Distantly Supervised Data and Biased Word Embeddings".
