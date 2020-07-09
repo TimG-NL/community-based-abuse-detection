@@ -94,6 +94,13 @@ File that gathers statistics about the abusive data
 ### /stats/reddit_non-abusive_stats.ipynb
 File that gathers statistics about the non-abusive data
 
+### word_embeddings/fasttext 
+Folder that contains the code for the creation and inspection of abusive and non-abusive word embeddings with fastText
+### word_embeddings/fasttext/createEmbeddings.py
+Code that creates the abusive and non-abusive embeddings with fastText
+### word_embeddings/fasttext/inspectEmbeddings.py
+Code that inspects the nearest neighbors of generated embeddings
+
 
 
 # Usage of models via command line
