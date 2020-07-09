@@ -1,0 +1,15 @@
+emoji==0.5.4
+fasttext==0.9.2
+h5py==2.10.0
+joblib==0.14.1
+Keras==2.3.1
+nltk==3.4.5
+numpy==1.18.1
+pandas==1.0.1
+redditcleaner==1.1.2
+scikit-learn==0.22.1
+tensorflow==2.2.0
+tensorflow-gpu==2.2.0
+tqdm==4.42.1
+praw==7.1.0
+
